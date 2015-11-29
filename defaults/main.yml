@@ -1,11 +1,8 @@
 ---
-workspace: /root
-
-# If git_install_from_source is set to false, these two variables define whether
-# to use an additional repo for the package installation, and which git packages
-# will be installed.
+# Pass in a comma-separated list of repos to use (e.g. "remi,epel").
 git_enablerepo: ""
 git_packages:
   - git
   - git-svn
 
+workspace: /root
