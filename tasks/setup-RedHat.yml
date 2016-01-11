@@ -1,7 +1,8 @@
 ---
-- name: Ensure git is installed.
-  yum:
-    name: "{{ item }}"
-    state: installed
-    enablerepo: "{{ git_enablerepo }}"
+- name: Define git_enablerepo.
+  set_fact: git_enablerepo={{ __git_enablerepo }}
+  when: git_enablerepo is not defined
+
+- name: Install Git packages.
+  yum: name={{ item }} state=installed enablerepo={{ git_enablerepo }}
   with_items: git_packages
