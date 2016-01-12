@@ -13,7 +13,7 @@ None
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
 ```yaml
-# This space intentionally left blank.
+# This space intentionally left blank
 ```
 
 ## Dependencies

@@ -1,9 +1,9 @@
 ---
-- name: Include OS-specific variables.
+- name: include os-specific variables
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Define git_packages.
-  set_fact: git_packages={{ __git_packages | list }}
+- name: define git_packages
+  set_fact: git_packages="{{ __git_packages | list }}"
   when: git_packages is not defined
 
 - include: setup-RedHat.yml
